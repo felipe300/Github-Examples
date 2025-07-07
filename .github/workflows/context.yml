@@ -10,16 +10,16 @@ jobs:
   my-context:
     runs-on: ubuntu-latest
     env:
-      My_ACTION: ${{ github.action }}
+      MY_ACTION: ${{ github.action }}
       MY_ACTOR: ${{ github.actor }}
     steps:
       - name: "My Step 1: Action"
         run: |
-          echo "Hello! $My_ACTION"
+          echo "Hello! $MY_ACTION"
         env:
           My_ACTION: ${{ github.action }}
       - name: "My Step 2: Actor"
         run: |
-          echo "Hi! $My_ACTOR"
+          echo "Hi! $MY_ACTOR"
         env:
           MY_ACTOR: ${{ github.actor }}
