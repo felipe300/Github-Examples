@@ -9,15 +9,12 @@ name: Context Example
 jobs:
   my-context:
     runs-on: ubuntu-latest
-    env:
-      MY_ACTION: ${{ github.action }}
-      MY_ACTOR: ${{ github.actor }}
     steps:
       - name: "My Step 1: Action"
         run: |
           echo "Hello! $MY_ACTION"
         env:
-          My_ACTION: ${{ github.action }}
+          MY_ACTION: ${{ github.action }}
       - name: "My Step 2: Actor"
         run: |
           echo "Hi! $MY_ACTOR"
